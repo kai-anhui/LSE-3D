@@ -1,0 +1,20 @@
+model:
+  dim: 32
+  hidden: 32
+  state: 4
+  gate_hidden: 32
+  scan_backend: parallel
+loss:
+  eq_w: 0
+  chg_w: 0
+  inc_w: 0
+  id_w: 0
+  gate_w: 0
+voxel_size: 10.0
+train:
+  seed: 7
+  steps: 10
+  lr: 0.0001
+  staged: false
+  log_every: 1
+  threads: 2

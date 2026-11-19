@@ -1,0 +1,26 @@
+_base_: base.yaml
+# Starting configuration, NOT a measured 5090 memory guarantee.
+model:
+  dim: 64
+  hidden: 64
+  state: 8
+  gate_hidden: 64
+  scan_backend: parallel
+loss:
+  eq_w: 0
+  chg_w: 0
+  inc_w: 0
+  id_w: 0
+  gate_w: 0.02
+voxel_size: 10.0
+train:
+  seed: 7
+  steps: 10000
+  lr: 0.0001
+  staged: false
+  bf16: true
+  accumulate: 1
+  augment: false
+  log_every: 20
+  save_every: 200
+  threads: 8

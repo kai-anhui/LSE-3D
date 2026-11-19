@@ -1,0 +1,21 @@
+model:
+  dim: 256
+  hidden: 128
+  state: 16
+  gate_hidden: 128
+  gate_mode: recurrent
+  states: dual
+  scan_backend: chunked
+loss:
+  eq_w: 0
+  chg_w: 0
+  inc_w: 0
+voxel_size: 2.0
+train:
+  seed: 0
+  steps: 1000
+  lr: 0.0001
+  staged: true
+  bf16: false
+  accumulate: 1
+  augment: false

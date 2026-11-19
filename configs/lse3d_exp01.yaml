@@ -1,0 +1,5 @@
+_base_: base.yaml
+# Primary LSE-3D experiment; unspecified values inherit base.yaml.
+model:
+  states: dual
+  gate_mode: recurrent

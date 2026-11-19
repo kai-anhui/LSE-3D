@@ -1,0 +1,15 @@
+scenes:
+  - id: changqing
+    cloud: point_data/长青点云彩色.txt
+    annotations: json/常青
+  - id: baijialiang
+    cloud: point_data/白家梁.las
+    annotations: json/白家粱
+  - id: hongjingta
+    cloud: point_data/弘景塔点云总.las
+    annotations: json/宏景塔
+# Baseline site holdout; rotate sites for subsequent experiments.
+splits:
+  train: [baijialiang]
+  val: [changqing]
+  test: [hongjingta]
